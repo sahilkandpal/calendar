@@ -43,8 +43,12 @@ next.addEventListener("click", () => {
 });
 
 const render = () => {
-  const currentYear = new Date().getFullYear();
-  const currentMonth = new Date().getMonth() + ptr;
+  const currentdate = new Date();
+  if (ptr != 0) {
+    currentdate.setMonth(new Date().getMonth() + ptr);
+  }
+  const currentYear = currentdate.getFullYear();
+  const currentMonth = currentdate.getMonth();
   const TDays = new Date(currentYear, currentMonth + 1, 0).getDate();
   const fday = new Date(currentYear, currentMonth, 1).getDay();
   console.log("tdays", fday);

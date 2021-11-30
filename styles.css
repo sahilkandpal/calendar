@@ -16,7 +16,7 @@ body {
 .calendar {
   border-radius: 20px;
   padding: 30px 20px;
-  background-color: lightgray;
+  border: 1px solid gray;
   min-height: 400px;
 }
 
@@ -28,7 +28,7 @@ body {
 .controls #back,
 .controls #next {
   padding: 2px 10px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   cursor: pointer;
   border-radius: 5px;
 }
@@ -58,6 +58,10 @@ body {
   gap: 10px;
 }
 .date {
-  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: 1px solid lightgray;
   cursor: pointer;
+}
+.date:hover {
+  box-shadow: -4px 8px 26px 0px rgba(0, 0, 0, 0.1);
 }
