@@ -44,6 +44,9 @@ next.addEventListener("click", () => {
 
 const render = () => {
   const currentdate = new Date();
+  const cd = currentdate.getDate();
+  const cY = currentdate.getFullYear();
+  const cM = currentdate.getMonth();
   if (ptr != 0) {
     currentdate.setMonth(new Date().getMonth() + ptr);
   }
@@ -74,6 +77,10 @@ const render = () => {
     const date = document.createElement("div");
     date.classList.add("date");
     date.innerText = i;
+    console.log(currentdate, i);
+    if (i == cd && cY == currentYear && cM == currentMonth) {
+      date.style.backgroundColor = "skyblue";
+    }
     dates.append(date);
   }
 };
